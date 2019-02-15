@@ -89,20 +89,20 @@ export default class Form extends Component{
 
 
         return(
-            <div>
+            <div style={{borderRadius:"5px", height:"420px", width:"400px", margin:"10px", background:"#3AD886"}}>
                 <div>
-                    <img style={{width:"350px",height:"auto"}} src={imageSelection} alt='item'/><br/>
+                    <img style={{width:"350px",height:"auto", margin:"10px"}} src={imageSelection} alt='item'/><br/>
                 </div>
-                Image Url:
+                Image Url:<br/>
                     <input onChange={(e)=>this.handleUrlInput(e.target.value)} value={this.state.url}/><br/>
-                Product Name:
+                Product Name:<br/>
                     <input onChange={(e)=>this.handleProductNameInput(e.target.value)} value={this.state.name}/><br/>
-                Price:
+                Price:<br/>
                     $<input type="number" onChange={(e)=>this.handlePriceInput(e.target.value)} value={this.state.price}/><br/>
-                <button onClick={()=>this.handleCancel()}>Cancel</button>
+                <button style={{background:"#D34735", borderRadius:"5px"}} onClick={()=>this.handleCancel()}>Cancel</button>
                 {this.state.id ? 
-                (<button onClick={()=>this.handleEditPut()}>Save Changes</button>):
-                (<button onClick={()=>this.handleAdd()}>Add to Inventory</button>)}
+                (<button style={{background:"#D34735", borderRadius:"5px"}} onClick={()=>this.handleEditPut()}>Save Changes</button>):
+                (<button style={{background:"#D34735", borderRadius:"5px"}} onClick={()=>this.handleAdd()}>Add to Inventory</button>)}
             </div>
         )
 
